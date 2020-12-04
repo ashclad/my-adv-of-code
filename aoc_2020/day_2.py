@@ -1,6 +1,3 @@
-from itertools import groupby as mkgroup
-from itertools import starmap
-
 # PT 1
 
 def strippify(string):
@@ -48,6 +45,7 @@ entries = list(map(testrule,entries))
 entries = list(filter(lambda x: False if x is None else True,entries))
 
 # PT 2
+
 with open('day_2-input.txt','r') as same_entries:
   same_entries = list(same_entries)
 
