@@ -14,19 +14,16 @@ count = 0
 # rowcount = 0
 
 for row in garden:
-  if unitmove < len(row):
-    if row[unitmove] == "#":
-      row[unitmove] = "X"
-      count += 1
-    elif row[unitmove] == ".":
-      row[unitmove] = "0"
-    unitmove += 3
-  # if unitmove >= len(row):
-  #   unitmove = 0
-  #   if row[unitmove] == "#":
-  #     row[unitmove] = "X"
-  #   elif row[unitmove] == ".":
-  #     row[unitmove] = "0"
+  if unitmove >= len(row):
+    unitmove -= len(row)
+
+  if row[unitmove] == "#":
+    row[unitmove] = "X"
+    count += 1
+  elif row[unitmove] == ".":
+    row[unitmove] = "0"
+  unitmove += 3
+
   print(row)
 
 print(count)
