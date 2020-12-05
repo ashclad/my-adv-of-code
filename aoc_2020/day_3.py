@@ -21,7 +21,7 @@ for row in garden:
     elif row[unitmove] == ".":
       row[unitmove] = "0"
     unitmove += 3
-  # elif unitmove >= len(row):
+  # if unitmove >= len(row):
   #   unitmove = 0
   #   if row[unitmove] == "#":
   #     row[unitmove] = "X"
